@@ -1,6 +1,7 @@
 Project Team Name: turnup
 
-Team Members: 	Cosi Jackson
+Team Members: 	
+Cosi Jackson
 David Persico
 Daniel Trahan
 Connor Hudson
