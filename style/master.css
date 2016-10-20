@@ -26,7 +26,7 @@ ul{
 
 header ul{
   display: flex;
-  background-color: rgb(255, 134, 132);
+  background-color: rgb(245, 94, 97);
   justify-content: center;
   margin: 10px 10px 5px 10px;
 }
@@ -49,7 +49,7 @@ nav{
 
 nav ul{
   display: flex;
-  background-color: rgb(255, 134, 132);
+  background-color: rgb(245,94,97);
   justify-content: center;
 }
 
@@ -89,12 +89,13 @@ nav ul li{
 }
 
 .appList ul li{
+  color: rgba(65, 68, 63, 1);
   margin-top: 1px;
   margin-bottom: 2px;
   padding: 20px;
-  background-color: rgb(255, 134, 132);
+  background-color: rgb(238,238,238);
   border-left-style: solid;
-  border-left-color: rgb(158, 67, 66);
+  border-left-color: rgb(245,94,97);
   border-width: 20px;
 }
 
@@ -134,13 +135,15 @@ nav ul li{
 }
 
 .upcomingTracks ul li{
+  color: rgba(65, 68, 63, 1);
   margin-top: 1px;
   margin-bottom: 2px;
   padding: 10px 0 10px 20px;
   border-left-style: solid;
-  border-left-color: rgb(158, 67, 66);
+  border-left-color: rgb(245,94,97);
   border-width: 20px;
-  background-color: rgb(255, 134, 132);
+  background-color: rgb(238,238,238);
+
 }
 
 @media screen and (max-width: 1230px){
