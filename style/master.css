@@ -1,0 +1,222 @@
+html{
+  height: 100%;
+}
+body{
+  font-family: sans-serif;
+  color: white;
+  background-color: white;
+  height: 98%;
+}
+
+h1{
+  font-size: 3em;
+  padding-bottom: 15px;
+}
+
+h2{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 1.2em;
+}
+
+ul{
+  list-style: none;
+}
+
+header ul{
+  display: flex;
+  background-color: rgb(255, 134, 132);
+  justify-content: center;
+  margin: 10px 10px 5px 10px;
+}
+
+header ul li{
+  margin: 20px 10px 20px 10px;
+}
+
+main {
+  display: flex;
+  height: 86%;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+
+}
+
+nav ul{
+  display: flex;
+  background-color: rgb(255, 134, 132);
+  justify-content: center;
+}
+
+nav ul li{
+  margin: 20px 10px 20px 10px;
+}
+
+.appBlock {
+  padding: 20px;
+  margin: 10px 10px 5px 10px;
+  background-color: rgba(65, 68, 63, 1);
+  width: 80%;
+}
+
+.appBlock h3{
+  padding-top: 10px;
+}
+
+.appList {
+  display: block;
+  position: relative;
+  padding: 0px 0px 20px 0px;
+  margin: 10px 5px 5px 10px;
+  background-color: rgba(65, 68, 63, 1);
+  width: 20%;
+}
+
+.appList h2{
+  padding: 20px;
+
+}
+
+.appList ul{
+  display: flex;
+  flex-flow: column;
+  align-content: flex-start;
+}
+
+.appList ul li{
+  margin-top: 1px;
+  margin-bottom: 2px;
+  padding: 20px;
+  background-color: rgb(255, 134, 132);
+  border-left-style: solid;
+  border-left-color: rgb(158, 67, 66);
+  border-width: 20px;
+}
+
+.playerInfo {
+  display: flex;
+  flex-flow: row;
+  background-color: rgba(65, 68, 63, 1);
+}
+
+.playerImages {
+  margin-top: 10px;
+  display: flex;
+}
+
+.playerImages img{
+  margin: 10px;
+}
+
+.sideImages {
+  display: flex;
+  flex-flow: column;
+}
+
+.upcomingTracks{
+  padding: 15px;
+  width: 50%;
+  background-color: rgba(65, 68, 63, 1);
+}
+
+.upcomingTracks h2{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.upcomingTracks ul{
+  width: 100%;
+}
+
+.upcomingTracks ul li{
+  margin-top: 1px;
+  margin-bottom: 2px;
+  padding: 10px 0 10px 20px;
+  border-left-style: solid;
+  border-left-color: rgb(158, 67, 66);
+  border-width: 20px;
+  background-color: rgb(255, 134, 132);
+}
+
+@media screen and (max-width: 1230px){
+  body{
+    height: auto;
+  }
+
+  main{
+    height: auto;
+    margin-bottom: 70px;
+  }
+
+  .upcomingTracks{
+    padding-right: 40px;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .upcomingTracks ul li{
+    width: 100%;
+  }
+
+  .playerInfo{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 975px){
+  body{
+    height: auto;
+  }
+  main {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  .appList {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 70px;
+    padding: 20px;
+  }
+
+  .appList h2{
+    padding: 0px 0px 10px 0px;
+  }
+
+  .appBlock {
+    width: 100%;
+  }
+  .playerInfo {
+    justify-content: left;
+  }
+  .upcomingTracks{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 40px;
+  }
+  .upcomingTracks ul{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 709px) {
+  .sideImages {
+    display: none;
+  }
+
+  .playerImages img{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .upcomingTracks ul{
+    width: 100%;
+  }
+}
