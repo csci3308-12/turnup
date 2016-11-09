@@ -6,39 +6,49 @@
     <meta name=viewport content="width=device-width, inital-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Rubik+One" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="style/html5reset-1.6.1.css">
+    <link rel="stylesheet" media="screen" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" media="screen" href="style/master.css">
+    <script src="scripts/audioplayer.js"></script>
   </head>
   <body>
+
+    <!-- ==== App Header ==== -->
     <header>
       <ul>
-        <li>HomeButton</li>
-        <li>Settings</li>
-        <li>Legal</li>
+        <li><a href="#"><img src="img/TurnupLogo.svg" alt="The logo of the TurnUp site" height="50" width="50" /></a></li>
       </ul>
     </header>
+
+    <!-- ==== App Mainbody ==== -->
     <main>
+
+      <!-- ==== Playlists ==== -->
       <section class="appList">
         <h2>Playlists</h2>
         <ul>
-          <li>PlaceHolderPlaylist1</li>
-          <li>PlaceHolderPlaylist2</li>
-          <li>PlaceHolderPlaylist3</li>
-          <li>PlaceHolderPlaylist4</li>
-          <li>PlaceHolderPlaylist5</li>
-          <li>PlaceHolderPlaylist6</li>
-          <li>PlaceHolderPlaylist7</li>
-          <li>PlaceHolderPlaylist8</li>
+          <li><button>PlaceHolderPlaylist1</button></li>
+          <li><button>PlaceHolderPlaylist2</button></li>
+          <li><button>PlaceHolderPlaylist3</button></li>
+          <li><button>PlaceHolderPlaylist4</button></li>
+          <li><button>PlaceHolderPlaylist5</button></li>
+          <li><button>PlaceHolderPlaylist6</button></li>
+          <li><button>PlaceHolderPlaylist7</button></li>
+          <li><button>PlaceHolderPlaylist8</button></li>
         </ul>
       </section>
+
+      <!-- ==== Player ==== -->
       <section class="appBlock">
         <h2>Playlist name</h2>
         <h1>Song title</h1>
         <div class="playerInfo">
+
+          <!-- ==== PlayerImages ==== -->
           <div class="playerImages">
             <figure>
               <img src="http://placehold.it/400x400" alt="A placeholder image" class="responsive"/>
               <h3>Artist</h3>
-              <h3>Some Other Stuff</h3>
+              <h3>Songs from <a href="http://bensound.com">Bensounds.com</a></h3>
               <h3>Memes</h3>
 
             </figure>
@@ -47,29 +57,38 @@
               <img src="http://placehold.it/190x190" alt="A placeholder image" class="responsive"/>
             </div>
           </div>
+
+          <!-- ==== Upcoming Songs ==== -->
           <div class="upcomingTracks">
-            <h2>Song History</h2>
+            <h2>Upcoming Tracks</h2>
             <ul>
-              <li>Demo1</li>
-              <li>Demo2</li>
-              <li>Demo3</li>
-              <li>Demo4</li>
-              <li>Demo5</li>
-              <li>Demo6</li>
-              <li>Demo7</li>
-              <li>Demo8</li>
+              <li><button>Demo1</button></li>
+              <li><button>Demo2</button></li>
+              <li><button>Demo3</button></li>
+              <li><button>Demo4</button></li>
+              <li><button>Demo5</button></li>
+              <li><button>Demo6</button></li>
+              <li><button>Demo7</button></li>
+              <li><button>Demo8</button></li>
             </ul>
           </div>
         </div>
       </section>
+
+      <!-- ==== Audio Player ==== -->
+      <audio id="aSong" src="music/bensound-anewbeginning.mp3">
+        <p>Your Browser does not support audio playback</p>
+      </audio>
     </main>
+
+    <!-- ==== Playback buttons ==== -->
     <nav>
       <ul>
-        <li>PrevSong</li>
-        <li>Pause</li>
-        <li>Play</li>
-        <li>Stop</li>
-        <li>NextSong</li>
+        <li><button onclick="prevSong()"><i class="fa fa-step-backward" aria-hidden="true"></i></button></li>
+        <li><button onclick="pauseSong()"><i class="fa fa-pause" aria-hidden="true"></i></button></li>
+        <li><button onclick="playSong()"><i class="fa fa-play" aria-hidden="true"></i></button></li>
+        <li><button onclick="stopSong()"><i class="fa fa-stop" aria-hidden="true"></i></button></li>
+        <li><button onclick="nextSong()"><i class="fa fa-step-forward" aria-hidden="true"></i></button></li>
       </ul>
     </nav>
   </body>

@@ -1,3 +1,7 @@
+/*======================================================*/
+/*------------------- Basic Objects---------------------*/
+/*======================================================*/
+
 html{
   height: 100%;
 }
@@ -5,7 +9,7 @@ body{
   font-family: sans-serif;
   color: white;
   background-color: white;
-  height: 98%;
+  margin-bottom: 60px;
 }
 
 h1{
@@ -23,22 +27,31 @@ h3{
 ul{
   list-style: none;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 
 header ul{
   display: flex;
   background-color: rgb(245, 94, 97);
   justify-content: center;
+  align-items: center;
   margin: 10px 10px 5px 10px;
 }
 
 header ul li{
-  margin: 20px 10px 20px 10px;
+  margin: 5px 10px 5px 10px;
 }
 
 main {
   display: flex;
   height: 86%;
 }
+
+/*============================================================*/
+/*--------------------- Navigation CSS -----------------------*/
+/*============================================================*/
 
 nav{
   position: fixed;
@@ -51,11 +64,39 @@ nav ul{
   display: flex;
   background-color: rgb(245,94,97);
   justify-content: center;
+  height: 50px;
 }
 
-nav ul li{
-  margin: 20px 10px 20px 10px;
+nav ul li button{
+  margin: 0px 10px 20px 10px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(245,94,97);
+  color: white;
+  border-style: none;
 }
+
+nav ul li button:hover{
+  margin: 0px 10px 20px 10px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(171, 221, 144);
+  color: white;
+  border-style: none;
+}
+
+nav ul li button:active{
+  margin: 0px 10px 20px 10px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(121, 171, 94);
+  color: white;
+  border-style: none;
+}
+
+/*===============================================================*/
+/*----------------------- App Container -------------------------*/
+/*===============================================================*/
 
 .appBlock {
   padding: 20px;
@@ -68,10 +109,14 @@ nav ul li{
   padding-top: 10px;
 }
 
+/*===========================================================*/
+/*-------------------- Playlist object-----------------------*/
+/*===========================================================*/
+
 .appList {
   display: block;
   position: relative;
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 200px 0px;
   margin: 10px 5px 5px 10px;
   background-color: rgba(65, 68, 63, 1);
   width: 20%;
@@ -89,15 +134,34 @@ nav ul li{
 }
 
 .appList ul li{
-  color: rgba(65, 68, 63, 1);
   margin-top: 1px;
   margin-bottom: 2px;
-  padding: 20px;
-  background-color: rgb(238,238,238);
   border-left-style: solid;
   border-left-color: rgb(245,94,97);
-  border-width: 20px;
+  border-left-width: 20px;
 }
+
+.appList ul li button{
+  width: 100%;
+  color: rgba(65, 68, 63, 1);
+  padding: 20px;
+  background-color: rgb(238,238,238);
+  border-style: none;
+}
+
+.appList ul li button:hover{
+  color: white;
+  background-color: rgba(238,238,238,0.7);
+}
+
+.appList ul li button:active{
+  color: white;
+  background-color: rgba(100,100,100,1);
+}
+
+/*===========================================================*/
+/*-------------------- Player Info --------------------------*/
+/*===========================================================*/
 
 .playerInfo {
   display: flex;
@@ -118,7 +182,9 @@ nav ul li{
   display: flex;
   flex-flow: column;
 }
-
+/*===================================================================*/
+/*-------------------- Upcoming Tracks Object -----------------------*/
+/*===================================================================*/
 .upcomingTracks{
   padding: 15px;
   width: 50%;
@@ -135,16 +201,34 @@ nav ul li{
 }
 
 .upcomingTracks ul li{
-  color: rgba(65, 68, 63, 1);
-  margin-top: 1px;
-  margin-bottom: 2px;
-  padding: 10px 0 10px 20px;
   border-left-style: solid;
   border-left-color: rgb(245,94,97);
-  border-width: 20px;
-  background-color: rgb(238,238,238);
-
+  border-left-width: 20px;
+  margin-top: 1px;
+  margin-bottom: 2px;
 }
+
+.upcomingTracks ul li button{
+  color: rgba(65, 68, 63, 1);
+  background-color: rgb(238,238,238);
+  border: none;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+}
+
+.upcomingTracks ul li button:hover{
+  color: white;
+  background-color: rgba(238,238,238,0.7);
+}
+
+.upcomingTracks ul li button:active{
+  color: white;
+  background-color: rgba(100,100,100,1);
+}
+
+/*=============================================================*/
+/*-------------------- Media Queries --------------------------*/
+/*=============================================================*/
 
 @media screen and (max-width: 1230px){
   body{
@@ -175,6 +259,7 @@ nav ul li{
 @media screen and (max-width: 975px){
   body{
     height: auto;
+    margin-bottom: 0px;
   }
   main {
     flex-wrap: wrap-reverse;
