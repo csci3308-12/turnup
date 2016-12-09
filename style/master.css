@@ -27,10 +27,6 @@ h3{
 ul{
   list-style: none;
 }
-a{
-  text-decoration: none;
-  color: white;
-}
 
 header ul{
   display: flex;
@@ -49,6 +45,10 @@ main {
   height: 86%;
 }
 
+button {
+  font-size: 1.02em;
+}
+
 /*============================================================*/
 /*--------------------- Navigation CSS -----------------------*/
 /*============================================================*/
@@ -64,34 +64,24 @@ nav ul{
   display: flex;
   background-color: rgb(245,94,97);
   justify-content: center;
+  align-items: center;
   height: 50px;
 }
 
 nav ul li button{
-  margin: 0px 10px 20px 10px;
   height: 100%;
-  width: 100%;
+  padding: 15px 20px 15px 20px;
   background-color: rgb(245,94,97);
   color: white;
   border-style: none;
 }
 
 nav ul li button:hover{
-  margin: 0px 10px 20px 10px;
-  height: 100%;
-  width: 100%;
   background-color: rgb(171, 221, 144);
-  color: white;
-  border-style: none;
 }
 
 nav ul li button:active{
-  margin: 0px 10px 20px 10px;
-  height: 100%;
-  width: 100%;
   background-color: rgb(121, 171, 94);
-  color: white;
-  border-style: none;
 }
 
 /*===============================================================*/
@@ -136,27 +126,6 @@ nav ul li button:active{
 .appList ul li{
   margin-top: 1px;
   margin-bottom: 2px;
-  border-left-style: solid;
-  border-left-color: rgb(245,94,97);
-  border-left-width: 20px;
-}
-
-.appList ul li button{
-  width: 100%;
-  color: rgba(65, 68, 63, 1);
-  padding: 20px;
-  background-color: rgb(238,238,238);
-  border-style: none;
-}
-
-.appList ul li button:hover{
-  color: white;
-  background-color: rgba(238,238,238,0.7);
-}
-
-.appList ul li button:active{
-  color: white;
-  background-color: rgba(100,100,100,1);
 }
 
 /*===========================================================*/
@@ -176,18 +145,27 @@ nav ul li button:active{
 
 .playerImages img{
   margin: 10px;
+  max-width: 400px;
 }
 
 .sideImages {
   display: flex;
   flex-flow: column;
 }
+
+.sideImages h3{
+  padding-left: 10px;
+}
+
+.sideImages img{
+  max-width: 175px;
+}
 /*===================================================================*/
-/*-------------------- Upcoming Tracks Object -----------------------*/
+/*----------------------------- Tracks Object -----------------------*/
 /*===================================================================*/
 .upcomingTracks{
   padding: 15px;
-  width: 50%;
+  width: 100%;
   background-color: rgba(65, 68, 63, 1);
 }
 
@@ -201,29 +179,53 @@ nav ul li button:active{
 }
 
 .upcomingTracks ul li{
+  margin-top: 1px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+.uptrack{
+  border: none;
   border-left-style: solid;
   border-left-color: rgb(245,94,97);
   border-left-width: 20px;
-  margin-top: 1px;
-  margin-bottom: 2px;
-}
 
-.upcomingTracks ul li button{
   color: rgba(65, 68, 63, 1);
   background-color: rgb(238,238,238);
-  border: none;
+
   width: 100%;
-  padding: 10px 0 10px 20px;
+  padding: 20px;
+
+
 }
 
-.upcomingTracks ul li button:hover{
+.uptrack:hover{
   color: white;
   background-color: rgba(238,238,238,0.7);
+  transition: ease 0.1s;
 }
 
-.upcomingTracks ul li button:active{
+.uptrack:active{
   color: white;
-  background-color: rgba(100,100,100,1);
+  background-color: rgb(81, 131, 54);
+  transition: ease 0.07s;
+}
+
+.uptrack-active{
+  color: white;
+  background-color: rgb(161, 211, 134);
+}
+
+.uptrack-active:hover{
+  color: white;
+  background-color: rgb(121, 171, 94);
+  transition: ease 0.1s;
+}
+
+.uptrack-active:active{
+  color: white;
+  background-color: rgb(81, 131, 54);
+  transition: ease 0.07s;
 }
 
 /*=============================================================*/
@@ -241,7 +243,7 @@ nav ul li button:active{
   }
 
   .upcomingTracks{
-    padding-right: 40px;
+    padding-right: 20px;
     width: 100%;
     margin-left: 0px;
     padding-left: 0px;
@@ -287,7 +289,7 @@ nav ul li button:active{
   .upcomingTracks{
     margin-left: 0px;
     padding-left: 0px;
-    padding-right: 40px;
+    padding-right: 0px;
   }
   .upcomingTracks ul{
     width: 100%;
